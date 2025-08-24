@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>هدية حب - وعد لمستقبلنا</title>
+    <title>قلبي ينبض لأجلك - هدية حب</title>
     <link href="https://fonts.googleapis.com/css2?family=Lateef:wght@400;700&family=Scheherazade+New&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
@@ -27,7 +27,7 @@
         }
 
         body {
-            background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+            background: linear-gradient(to bottom, #20002c, #2b0057, #4a0072);
             color: var(--light-color);
             min-height: 100vh;
             background-attachment: fixed;
@@ -97,13 +97,13 @@
 
         header {
             text-align: center;
-            padding: 40px 0 20px;
+            padding: 20px 0 10px;
         }
 
         .logo {
             font-size: 3rem;
             color: var(--gold-color);
-            margin-bottom: 10px;
+            margin-bottom: 5px;
             font-family: 'Lateef', cursive;
             text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
         }
@@ -113,11 +113,11 @@
             background: rgba(89, 13, 34, 0.8);
             backdrop-filter: blur(10px);
             border-radius: 50px;
-            margin: 30px auto;
-            padding: 15px;
+            margin: 15px auto;
+            padding: 12px;
             max-width: 800px;
             position: sticky;
-            top: 20px;
+            top: 15px;
             z-index: 100;
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -131,17 +131,17 @@
         }
 
         nav ul li {
-            margin: 5px 15px;
+            margin: 3px 10px;
         }
 
         nav ul li a {
             color: var(--light-color);
             text-decoration: none;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             transition: all 0.3s;
             display: flex;
             align-items: center;
-            padding: 8px 15px;
+            padding: 6px 12px;
             border-radius: 30px;
         }
 
@@ -152,13 +152,13 @@
         }
 
         nav ul li a i {
-            margin-left: 8px;
+            margin-left: 6px;
         }
 
         /* الأقسام */
         section {
-            min-height: 100vh;
-            padding: 80px 20px;
+            min-height: 90vh;
+            padding: 40px 20px;
             display: none;
             opacity: 0;
             transition: opacity 0.8s;
@@ -177,8 +177,8 @@
 
         .section-title {
             text-align: center;
-            font-size: 3rem;
-            margin-bottom: 50px;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
             color: var(--gold-color);
             text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
             position: relative;
@@ -188,10 +188,10 @@
         .section-title::after {
             content: '';
             display: block;
-            width: 150px;
-            height: 4px;
+            width: 120px;
+            height: 3px;
             background: linear-gradient(to right, transparent, var(--primary-color), transparent);
-            margin: 20px auto;
+            margin: 15px auto;
             border-radius: 3px;
         }
 
@@ -202,7 +202,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background: url('https://images.unsplash.com/photo-1531512073830-ba890ca4eba2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80') no-repeat center center/cover;
+            background: url('photo/download\ \(1\).jpg') no-repeat center center/cover;
             position: relative;
         }
 
@@ -220,7 +220,7 @@
         .home-content {
             max-width: 800px;
             background: rgba(89, 13, 34, 0.7);
-            padding: 50px;
+            padding: 40px;
             border-radius: 20px;
             backdrop-filter: blur(10px);
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
@@ -230,30 +230,71 @@
         }
 
         .home-title {
-            font-size: 4rem;
-            margin-bottom: 20px;
+            font-size: 3.5rem;
+            margin-bottom: 15px;
             color: var(--gold-color);
             font-family: 'Lateef', cursive;
             text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
         }
 
         .home-subtitle {
-            font-size: 2.2rem;
-            margin-bottom: 30px;
+            font-size: 2rem;
+            margin-bottom: 20px;
             line-height: 1.6;
             color: var(--light-color);
         }
 
         .promise {
-            font-size: 1.8rem;
+            font-size: 1.7rem;
             font-weight: 600;
             color: var(--primary-color);
-            margin: 40px 0;
-            padding: 25px;
+            margin: 30px 0;
+            padding: 20px;
             border: 2px solid var(--gold-color);
             border-radius: 15px;
             background: rgba(255, 255, 255, 0.1);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* تصميم الصور */
+        .image-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .image-item {
+            width: 280px;
+            text-align: center;
+        }
+
+        .image-frame {
+            width: 100%;
+            height: 240px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            border: 3px solid var(--gold-color);
+            margin-bottom: 15px;
+        }
+
+        .image-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .image-frame:hover img {
+            transform: scale(1.1);
+        }
+
+        .image-caption {
+            font-size: 1.2rem;
+            color: var(--gold-color);
+            font-weight: bold;
         }
 
         /* صفحة قصتنا */
@@ -261,14 +302,14 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 40px;
-            margin-top: 50px;
+            gap: 30px;
+            margin-top: 30px;
         }
 
         .story-card {
             background: linear-gradient(145deg, rgba(255, 143, 163, 0.2), rgba(255, 77, 109, 0.3));
             border-radius: 20px;
-            padding: 30px;
+            padding: 25px;
             width: 320px;
             text-align: center;
             backdrop-filter: blur(5px);
@@ -278,27 +319,27 @@
         }
 
         .story-card:hover {
-            transform: translateY(-15px) scale(1.03);
+            transform: translateY(-10px) scale(1.03);
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
         }
 
         .story-card i {
-            font-size: 3.5rem;
+            font-size: 3rem;
             color: var(--gold-color);
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
         }
 
         .story-card h3 {
-            font-size: 1.8rem;
-            margin-bottom: 20px;
+            font-size: 1.7rem;
+            margin-bottom: 15px;
             color: var(--gold-color);
             font-family: 'Lateef', cursive;
         }
 
         .story-card p {
-            line-height: 1.8;
-            font-size: 1.3rem;
+            line-height: 1.7;
+            font-size: 1.2rem;
         }
 
         /* صفحة المستقبل */
@@ -306,7 +347,7 @@
             max-width: 800px;
             margin: 0 auto;
             background: linear-gradient(145deg, rgba(123, 44, 191, 0.2), rgba(59, 9, 108, 0.3));
-            padding: 40px;
+            padding: 30px;
             border-radius: 20px;
             backdrop-filter: blur(5px);
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
@@ -314,18 +355,18 @@
         }
 
         .future-content p {
-            font-size: 1.4rem;
-            line-height: 1.9;
-            margin-bottom: 25px;
+            font-size: 1.3rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
             text-align: center;
         }
 
         .sacrifice {
             text-align: center;
-            font-size: 1.8rem;
+            font-size: 1.7rem;
             font-style: italic;
-            margin: 50px 0;
-            padding: 30px;
+            margin: 40px 0;
+            padding: 25px;
             border-left: 4px solid var(--gold-color);
             background: rgba(255, 255, 255, 0.1);
             border-radius: 10px;
@@ -335,15 +376,15 @@
         /* صفحة الأحلام */
         .dreams-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            margin-top: 50px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
         }
 
         .dream-card {
             background: linear-gradient(145deg, rgba(212, 175, 55, 0.2), rgba(255, 193, 7, 0.3));
             border-radius: 20px;
-            padding: 30px;
+            padding: 25px;
             text-align: center;
             backdrop-filter: blur(5px);
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
@@ -352,27 +393,27 @@
         }
 
         .dream-card:hover {
-            transform: translateY(-10px) rotate(2deg);
+            transform: translateY(-8px) rotate(2deg);
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
         }
 
         .dream-card i {
-            font-size: 3rem;
+            font-size: 2.8rem;
             color: var(--primary-color);
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             text-shadow: 0 0 10px rgba(255, 77, 109, 0.5);
         }
 
         .dream-card h3 {
-            font-size: 1.8rem;
-            margin-bottom: 20px;
+            font-size: 1.7rem;
+            margin-bottom: 15px;
             color: var(--primary-color);
             font-family: 'Lateef', cursive;
         }
 
         .dream-card p {
-            line-height: 1.8;
-            font-size: 1.3rem;
+            line-height: 1.7;
+            font-size: 1.2rem;
         }
 
         /* صفحة المفاجآت */
@@ -384,8 +425,8 @@
         .surprise {
             background: linear-gradient(145deg, rgba(255, 77, 109, 0.2), rgba(179, 0, 39, 0.3));
             border-radius: 20px;
-            padding: 30px;
-            margin-bottom: 40px;
+            padding: 25px;
+            margin-bottom: 30px;
             text-align: center;
             backdrop-filter: blur(5px);
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
@@ -400,26 +441,26 @@
 
         .surprise h3 {
             color: var(--gold-color);
-            margin-bottom: 20px;
-            font-size: 2rem;
+            margin-bottom: 15px;
+            font-size: 1.9rem;
             font-family: 'Lateef', cursive;
         }
 
         .surprise p {
-            line-height: 1.8;
-            font-size: 1.4rem;
+            line-height: 1.7;
+            font-size: 1.3rem;
         }
 
         .hearts {
             display: flex;
             justify-content: center;
-            margin: 30px 0;
+            margin: 25px 0;
         }
 
         .heart {
             color: var(--primary-color);
-            font-size: 2.5rem;
-            margin: 0 15px;
+            font-size: 2.2rem;
+            margin: 0 12px;
             animation: pulse 1.5s infinite;
             text-shadow: 0 0 15px rgba(255, 77, 109, 0.7);
         }
@@ -435,7 +476,7 @@
             max-width: 800px;
             margin: 0 auto;
             background: linear-gradient(145deg, rgba(89, 13, 34, 0.5), rgba(59, 9, 108, 0.6));
-            padding: 50px;
+            padding: 40px;
             border-radius: 20px;
             backdrop-filter: blur(10px);
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
@@ -443,8 +484,8 @@
         }
 
         .countdown-title {
-            font-size: 2.5rem;
-            margin-bottom: 40px;
+            font-size: 2.3rem;
+            margin-bottom: 30px;
             color: var(--gold-color);
             font-family: 'Lateef', cursive;
         }
@@ -453,54 +494,54 @@
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 25px;
+            gap: 20px;
         }
 
         .countdown-item {
             background: rgba(255, 255, 255, 0.1);
             border-radius: 15px;
-            padding: 25px;
-            min-width: 140px;
+            padding: 20px;
+            min-width: 120px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .countdown-number {
-            font-size: 3.5rem;
+            font-size: 3rem;
             font-weight: bold;
             color: var(--primary-color);
-            margin-bottom: 15px;
+            margin-bottom: 10px;
             text-shadow: 0 0 10px rgba(255, 77, 109, 0.5);
         }
 
         .countdown-label {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             color: var(--light-color);
         }
 
         .message {
-            margin-top: 50px;
-            font-size: 1.4rem;
-            line-height: 1.9;
+            margin-top: 40px;
+            font-size: 1.3rem;
+            line-height: 1.8;
         }
 
         /* التحكم بالموسيقى */
         .music-player {
             position: fixed;
-            bottom: 30px;
-            left: 30px;
+            bottom: 25px;
+            left: 25px;
             z-index: 100;
         }
 
         .music-btn {
-            width: 60px;
-            height: 60px;
+            width: 55px;
+            height: 55px;
             border-radius: 50%;
             background: var(--primary-color);
             color: white;
             border: none;
             cursor: pointer;
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
             display: flex;
             justify-content: center;
@@ -516,15 +557,15 @@
         /* التكيف مع الشاشات الصغيرة */
         @media (max-width: 768px) {
             .home-title {
-                font-size: 2.8rem;
+                font-size: 2.5rem;
             }
             
             .home-subtitle {
-                font-size: 1.6rem;
+                font-size: 1.5rem;
             }
             
             .section-title {
-                font-size: 2.5rem;
+                font-size: 2rem;
             }
             
             nav ul {
@@ -533,15 +574,25 @@
             }
             
             .countdown-item {
-                min-width: 100px;
+                min-width: 90px;
             }
             
             .countdown-number {
-                font-size: 2.5rem;
+                font-size: 2.2rem;
             }
             
             .promise {
-                font-size: 1.5rem;
+                font-size: 1.3rem;
+            }
+
+            .image-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .image-item {
+                width: 100%;
+                max-width: 300px;
             }
         }
 
@@ -563,44 +614,44 @@
             50% { border-color: var(--gold-color) }
         }
 
-        /* الورود في الزوايا */
-        .corner-rose {
+        /* القلوب في الزوايا */
+        .corner-heart {
             position: fixed;
-            font-size: 4rem;
+            font-size: 3.5rem;
             color: var(--primary-color);
             opacity: 0.4;
             z-index: -1;
-            animation: rotate 20s linear infinite;
-            text-shadow: 0 0 10px rgba(255, 77, 109, 0.5);
+            animation: heartbeat 2s infinite;
+            text-shadow: 0 0 15px rgba(255, 77, 109, 0.7);
         }
 
-        @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
         }
 
-        .rose-1 {
-            top: 40px;
-            left: 40px;
+        .heart-1 {
+            top: 30px;
+            left: 30px;
         }
 
-        .rose-2 {
-            bottom: 40px;
-            right: 40px;
+        .heart-2 {
+            bottom: 30px;
+            right: 30px;
         }
 
-        .rose-3 {
-            bottom: 40px;
-            left: 40px;
+        .heart-3 {
+            bottom: 30px;
+            left: 30px;
         }
 
-        .rose-4 {
-            top: 40px;
-            right: 40px;
+        .heart-4 {
+            top: 30px;
+            right: 30px;
         }
 
-        /* أزهار متساقطة */
-        .falling-flowers {
+        /* قلوب متساقطة */
+        .falling-hearts {
             position: fixed;
             top: 0;
             left: 0;
@@ -610,12 +661,13 @@
             z-index: -1;
         }
 
-        .flower {
+        .falling-heart {
             position: absolute;
-            font-size: 2rem;
+            font-size: 1.8rem;
             color: var(--primary-color);
             opacity: 0.7;
             animation: fall linear infinite;
+            text-shadow: 0 0 10px rgba(255, 77, 109, 0.7);
         }
 
         @keyframes fall {
@@ -627,13 +679,20 @@
         /* تأثيرات التمرير */
         .fade-in {
             opacity: 0;
-            transform: translateY(50px);
-            transition: all 1s;
+            transform: translateY(40px);
+            transition: all 0.8s;
         }
 
         .fade-in.visible {
             opacity: 1;
             transform: translateY(0);
+        }
+
+        /* نص مضيء */
+        .glow-text {
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.7),
+                         0 0 20px rgba(255, 255, 255, 0.5),
+                         0 0 30px rgba(255, 77, 109, 0.6);
         }
     </style>
 </head>
@@ -642,19 +701,19 @@
     <div class="stars" id="stars"></div>
     <div class="moon"></div>
     
-    <!-- الورود في الزوايا -->
-    <div class="corner-rose rose-1">🌹</div>
-    <div class="corner-rose rose-2">🌹</div>
-    <div class="corner-rose rose-3">🌹</div>
-    <div class="corner-rose rose-4">🌹</div>
+    <!-- القلوب في الزوايا -->
+    <div class="corner-heart heart-1">❤️</div>
+    <div class="corner-heart heart-2">❤️</div>
+    <div class="corner-heart heart-3">❤️</div>
+    <div class="corner-heart heart-4">❤️</div>
     
-    <!-- أزهار متساقطة -->
-    <div class="falling-flowers" id="falling-flowers"></div>
+    <!-- قلوب متساقطة -->
+    <div class="falling-hearts" id="falling-hearts"></div>
     
     <div class="container">
         <header>
             <div class="logo">
-                <i class="fas fa-heart"></i> هدية حب
+                <i class="fas fa-heart"></i>  قلبي ينبض لأجلك  <i class="fas fa-heart"></i>
             </div>
         </header>
         
@@ -664,99 +723,182 @@
                 <li><a href="#story" class="nav-link" data-section="story"><i class="fas fa-book-open"></i> قصتنا</a></li>
                 <li><a href="#future" class="nav-link" data-section="future"><i class="fas fa-calendar"></i> المستقبل</a></li>
                 <li><a href="#dreams" class="nav-link" data-section="dreams"><i class="fas fa-cloud"></i> أحلامنا</a></li>
-                <li><a href="#surprises" class="nav-link" data-section="surprises"><i class="fas fa-gift"></i> مفاجآت</a></li>
-                <li><a href="#countdown" class="nav-link" data-section="countdown"><i class="fas fa-hourglass-half"></i> العد التنازلي</a></li>
+                <li><a href="#surprises" class="nav-link" data-section="surprises"><i class="fas fa-gift"></i> رسائل حب</a></li>
             </ul>
         </nav>
         
         <!-- الصفحة الرئيسية -->
         <section id="home" class="active">
             <div class="home-content">
-                <h1 class="home-title animate__animated animate__fadeInDown">هدية إلى حبيبتي</h1>
-                <h2 class="home-subtitle animate__animated animate__fadeIn animate__delay-1s">هذه ليست مجرد هدية... هذا وعد لمستقبلنا معًا ❤️</h2>
+                <h1 class="home-title animate__animated animate__fadeInDown">إلى حبيبة قلبي</h1>
+                <h2 class="home-subtitle animate__animated animate__fadeIn animate__delay-1s">هذه ليس مجرد موقع... هذا وعد لمستقبلنا معًا ❤️</h2>
                 <div class="promise animate__animated animate__fadeIn animate__delay-2s">
-                    كل خطوة أخطوها اليوم هي من أجل غدنا معًا
+                    "كل خطوة أخطوها اليوم هي من أجل غدنا معًا، كل لحظة بعيدة عنك هي تضحية صغيرة من أجل سعادتنا الكبيرة.
                 </div>
-                <p class="animate__animated animate__fadeIn animate__delay-3s">هذا الموقع هو هدية متواضعة لأجمل إمرأة في حياتي، لأعبر عن مدى حبي لكِ وأشارككِ رؤيتي لمستقبلنا الجميل معًا.</p>
+                <p class="animate__animated animate__fadeIn animate__delay-3s">هذا الموقع هو هدية متواضعة من قلبي إلى قلبك، لأعبر عن مدى حبي لكِ وأشارككِ رؤيتي لمستقبلنا الجميل معًا. هنا سأخبرك بقصتنا، أحلامنا، والتضحيات التي ستبني مستقبلنا.</p>
+                
+                <div class="image-grid">
+                    <div class="image-item fade-in">
+                        <div class="image-frame">
+                            <img src="photo/download (2).jpg" alt="حبنا">
+                        </div>
+                        <div class="image-caption">أنتِ الحرية التي كان يبحث عنها إرين… وبدونك لا معنى لكل معاركي</div>
+                    </div>
+                    
+                    <div class="image-item fade-in">
+                        <div class="image-frame">
+                            <img src="photo/download (3).jpg" alt="وعدنا">
+                        </div>
+                        <div class="image-caption">كمشاهد للانمي اقول : حتى لو عشتُ ملايين المواسم، لن أختار إلا أن أكون في نفس الجزء معك</div>
+                    </div>
+                </div>
             </div>
         </section>
         
         <!-- صفحة قصتنا -->
         <section id="story">
-            <h2 class="section-title">قصتنا</h2>
+            <h2 class="section-title">I meow meow for you</h2>
+            
+            <div class="image-grid">
+                <div class="image-item fade-in">
+                    <div class="image-frame">
+                        <img src="photo/download (4).jpg" alt="لقاؤنا الأول">
+                    </div>
+                    <div class="image-caption">مثل سبايدرمان، قد أختفي أحيانًا لمحاربة المستقبل، لكن قلبي مربوط بك دائمًا مثل خيوط شبكته.</div>
+                </div>
+                
+                <div class="image-item fade-in">
+                    <div class="image-frame">
+                        <img src="photo/download (6).jpg" alt="أجمل اللحظات">
+                    </div>
+                    <div class="image-caption">I love you imene</div>
+                </div>
+            </div>
+            
             <div class="story-container">
                 <div class="story-card fade-in">
                     <i class="fas fa-heart"></i>
                     <h3>لقاؤنا الأول</h3>
-                    <p>أتذكر أول مرة رأيتكِ فيها، كانت عيناكِ تلمعان بالدفء والطيبة، وشعرت وكأنني عرفتكِ منذ سنين.</p>
+                    <p>عندما رأيتكِ لأول مرة في الثانوية لم أكن أعلم أنكِ ستصبحين أهم إنسانة في حياتي. مررتِ أمامي كأنكِ شخص عادي، لكن مع مرور الأيام أدركت أنني التقيتُ بأغلى ما يمكن أن يقدمه لي القدر.</p>
                 </div>
                 
                 <div class="story-card fade-in">
                     <i class="fas fa-laugh"></i>
                     <h3>أجمل اللحظات</h3>
-                    <p>كل لحظة أمضيتها معكِ هي كنز ثمين، من الضحكات التي تملأ الجو إلى الصمت المريح بيننا.</p>
+                    <p>أجمل اللحظات
+كل محادثة بيننا على إنستقرام هي لحظة خاصة أحتفظ بها في قلبي. من كلماتك التي تزرع البسمة على وجهي، إلى رسائلك البسيطة التي تحمل أجمل المعاني… ذكرياتنا هنا هي قصتنا الجميلة التي تكبر يومًا بعد يوم. رغم انني اظن ومتاكد ان اجمل احظاتتنا لم تاتي بعد</p>
                 </div>
                 
                 <div class="story-card fade-in">
                     <i class="fas fa-book"></i>
                     <h3>سبب حبي لكِ</h3>
-                    <p>أحبكِ لأنكِ تجعلينني شخصًا أفضل، لأنكِ تدعمينني في كل خطوة، ولأنكِ أنتِ نصفي الذي كنتُ أبحث عنه.</p>
+                    <p>أحبكِ لأنكِ تجعلينني شخصًا أفضل، لأنكِ تدعمينني في كل خطوة، ولأنكِ أنتِ نصفي الذي كنتُ أبحث عنه. أحبكِ لأنكِ تجعلين الحياة أجمل بمجرد وجودك فيها.</p>
                 </div>
             </div>
         </section>
         
         <!-- صفحة المستقبل -->
         <section id="future">
-            <h2 class="section-title">المستقبل</h2>
-            <div class="future-content fade-in">
-                <p>ابتداءً من 1 سبتمبر، سأبدأ رحلة جديدة في حياتي لتعلم اللغة الألمانية بجدية، والعمل كمطور مواقع مستقل.</p>
-                <p>هذا يعني أنني لن أستطيع التحدث معكِ كل يوم كما في السابق، بل فقط يومي الأربعاء والخميس.</p>
-                
-                <div class="sacrifice">
-                    "قد يبدو الأمر صعبًا، لكنه تضحيتنا الصغيرة من أجل سعادتنا الكبيرة في المستقبل"
+             <h2 class="section-title">كما يراوغ ميسي الجميع ليصل للمرمى، أنا أراوغ كل صعوبات الحياة لأصل إليك</h2>
+            <div class="image-grid">
+                <div class="image-item fade-in">
+                    <div class="image-frame">
+                        <img src="photo/Messi and Antonella.jpg" alt="مستقبلنا">
+                    </div>
+                    <div class="image-caption">أنتِ هدفي الأجمل، والهدف الذي لا أريد أن أتوقف عن السعي وراءه</div>
                 </div>
                 
-                <p>كل هذا من أجل مستقبلنا، لتوفير المال للزواج بكِ والعيش معًا في حياة مستقرة ومليئة بالسعادة.</p>
+                <div class="image-item fade-in">
+                    <div class="image-frame">
+                        <img src="photo/mathias.jpg" alt="أهدافنا">
+                    </div>
+                    <div class="image-caption">مثل ميسي بالكرة، أنتِ مع قلبي… لا أحد يستطيع أن يأخذ مكانك</div>
+                </div>
+            </div>
+            
+            <div class="future-content fade-in">
+                <p>ابتداءً من 1 سبتمبر، سأبدأ رحلة جديدة في حياتي لتعلم اللغة الألمانية بجدية، والعمل كمطور مواقع مستقل. هذا القرار لم أتخذه إلا بعد تفكير عميق، وهو من أجلنا ومن أجل مستقبلنا.</p>
+                <p>هذا يعني أنني لن أستطيع التحدث معكِ كل يوم كما في السابق، بل فقط يومي الأربعاء والخميس. أعلم أن هذا سيكون صعبًا علينا ، لكنه ضروري لبناء مستقبلنا.</p>
+                
+                <div class="sacrifice">
+                    "قد يبدو الأمر صعبًا الآن، لكنه تضحيتنا الصغيرة من أجل سعادتنا الكبيرة في المستقبل.كل لحظة بعيدة عنك، هي خطوة نحو حب أبدي يجمعنا"
+                </div>
+                
+                <p>كل هذا من أجل مستقبلنا، لتوفير المال للزواج بكِ والعيش معًا في حياة مستقرة ومليئة بالسعادة. أريد أن أمنحكِ الحياة التي تستحقينها، وأن نبني مستقبلًا يليق بحبنا.</p>
             </div>
         </section>
         
         <!-- صفحة الأحلام -->
         <section id="dreams">
-            <h2 class="section-title">أحلامنا</h2>
+            <h2 class="section-title">أحلامنا معًا</h2>
+            
+            <div class="image-grid">
+                <div class="image-item fade-in">
+                    <div class="image-frame">
+                        <img src="photo/download (8).jpg" alt="الزواج">
+                    </div>
+                    <div class="image-caption">تقبلي ؟</div>
+                </div>
+                
+                <div class="image-item fade-in">
+                    <div class="image-frame">
+                        <img src="photo/download (7).jpg" alt="منزلنا">
+                    </div>
+                    <div class="image-caption">منزل أحلامنا</div>
+                </div>
+            </div>
+            
             <div class="dreams-container">
                 <div class="dream-card fade-in">
                     <i class="fas fa-ring"></i>
                     <h3>الزواج</h3>
-                    <p>أحلم باليوم الذي أصبح فيه زوجكِ، وأقف بجانبكِ في كل لحظة من حياتنا.</p>
+                    <p>أحلم باليوم الذي أصبح فيه زوجكِ، وأقف بجانبكِ في كل لحظة من حياتنا. يوم نعد فيه بعضنا بالحب والوفاء إلى الأبد، ونبدأ رحلة الحياة كشريكين متحابين.</p>
                 </div>
                 
                 <div class="dream-card fade-in">
                     <i class="fas fa-home"></i>
                     <h3>منزلنا</h3>
-                    <p>منزل دافئ نملؤه بالحب والضحكات، حيث نصنع ذكرياتنا الجميلة معًا.</p>
+                    <p>منزل دافئ نملؤه بالحب والضحكات، حيث نصنع ذكرياتنا الجميلة معًا. منزل يكون ملاذنا الآمن، حيث نجد السكينة والراحة في أحضان بعضنا البعض.</p>
                 </div>
                 
                 <div class="dream-card fade-in">
                     <i class="fas fa-plane"></i>
                     <h3>السفر</h3>
-                    <p>اكتشاف العالم معًا، وتجربة ثقافات جديدة، وتذوق أطعمة مختلفة حول العالم.</p>
+                    <p>اكتشاف العالم معًا، وتجربة ثقافات جديدة، وتذوق أطعمة مختلفة حول العالم. سنزور أماكن جميلة ونخلق ذكريات لا تنسى في كل رحلة نقوم بها together.</p>
                 </div>
                 
                 <div class="dream-card fade-in">
                     <i class="fas fa-smile"></i>
                     <h3>السعادة</h3>
-                    <p>أكبر حلم لي هو رؤيتكِ سعيدة كل يوم، وأن أكون سببًا من أسباب ابتسامتكِ.</p>
+                    <p>أكبر حلم لي هو رؤيتكِ سعيدة كل يوم، وأن أكون سببًا من أسباب ابتسامتكِ. أريد أن أمضي حياتي وأنا أسعى لجلب السعادة إلى قلبك، كما جلبتيها إلى قلبي.</p>
                 </div>
             </div>
         </section>
         
         <!-- صفحة المفاجآت -->
         <section id="surprises">
-            <h2 class="section-title">مفاجآت</h2>
+            <h2 class="section-title">Nmoooot 3lik mommy</h2>
+            
+            <div class="image-grid">
+                <div class="image-item fade-in">
+                    <div class="image-frame">
+                        <img src="photo/Just look at the way she's looking at him!!! Oh the feels!!.jpg" alt="رسالة حب">
+                    </div>
+                    <div class="image-caption"></div>
+                </div>
+                
+                <div class="image-item fade-in">
+                    <div class="image-frame">
+                        <img src="photo/Little Women.jpg" alt="وعد">
+                    </div>
+                    <div class="image-caption"></div>
+                </div>
+            </div>
+            
             <div class="surprises-container">
                 <div class="surprise fade-in">
                     <h3>رسالة حب</h3>
-                    <p>حبيبتي، مهما ابتعدت عنكِ جغرافيًا، سأبقى قريبًا منكِ بقلبي وروحي. أنتِ دائمًا في خاطري.</p>
+                    <p>ايمان، مهما ابتعدت عنكِ جغرافيًا، سأبقى قريبًا منكِ بقلبي وروحي. أنتِ دائمًا في خاطري وفي كل نبضة من نبضات قلبي. أعلم أن الفراق مؤلم، لكنه سيجعل لقاءنا أحلى.</p>
                     <div class="hearts">
                         <div class="heart">❤️</div>
                         <div class="heart">❤️</div>
@@ -767,59 +909,23 @@
                 <div class="surprise fade-in">
                     <h3>اقتباس رومانسي</h3>
                     <p>"الحب ليس أن تنظر إلى بعضكما البعض، بل أن تنظرا معًا في نفس الاتجاه." - أنطوان دو سانت إكزوبيري</p>
+                    <p>"أحبك ليس لما أنت عليه، بل لما أنا عليه عندما أكون معك."</p>
                 </div>
                 
                 <div class="surprise fade-in">
-                    <h3>وعد</h3>
-                    <p>أعدكِ أنني سأعمل بجد كل يوم ليكون غدنا أفضل، وأن كل هذا الجهد هو من أجلنا ومن أجل مستقبلنا معًا.</p>
-                </div>
+                    <h3>وعد من القلب</h3>
+                    <p>أعدكِ أنني سأعمل بجد كل يوم ليكون غدنا أفضل، وأن كل هذا الجهد هو من أجلنا ومن أجل مستقبلنا معًا. أعدك أن أحبك كل يوم أكثر من اليوم الذي سبقه، وأن أظل وفيًا لك إلى الأبد.</p>
+
+                <div class="surprise fade-in">
+                    <h3>كلمات من الأعماق</h3>
+                    <p>ايمان، قد تكون الأيام القادمة صعبة، ولكن ثقي أن كل هذا من أجلنا. سأفكر فيك كل يوم، وسأعد الأيام حتى أعود إليك.صاي عييت قولي لباباك يزوجنا ومم مبعد نردله</div>
             </div>
         </section>
         
-        <!-- صفحة العد التنازلي -->
-        <section id="countdown">
-            <h2 class="section-title">العد التنازلي</h2>
-            <div class="countdown-container fade-in">
-                <h3 class="countdown-title">حتى تحقيق أحلامنا</h3>
-                
-                <div class="countdown">
-                    <div class="countdown-item">
-                        <div class="countdown-number" id="years">5</div>
-                        <div class="countdown-label">سنوات</div>
-                    </div>
-                    
-                    <div class="countdown-item">
-                        <div class="countdown-number" id="months">0</div>
-                        <div class="countdown-label">أشهر</div>
-                    </div>
-                    
-                    <div class="countdown-item">
-                        <div class="countdown-number" id="days">0</div>
-                        <div class="countdown-label">أيام</div>
-                    </div>
-                    
-                    <div class="countdown-item">
-                        <div class="countdown-number" id="hours">0</div>
-                        <div class="countdown-label">ساعات</div>
-                    </div>
-                </div>
-                
-                <div class="message">
-                    <p>هذا العد التنازلي يمثل الفترة التي سأعمل فيها بجد لتحقيق أحلامنا، حتى نلتقي لنبدأ حياة جديدة معًا.</p>
-                </div>
-            </div>
-        </section>
-    </div>
+     
+  
     
-    <!-- مشغل الموسيقى -->
-    <div class="music-player">
-        <button class="music-btn" id="music-toggle">
-            <i class="fas fa-music"></i>
-        </button>
-        <audio id="background-music" loop>
-            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
-        </audio>
-    </div>
+   
 
     <script>
         // إنشاء النجوم في الخلفية
@@ -848,32 +954,32 @@
             }
         }
         
-        // إنشاء أزهار متساقطة
-        function createFallingFlowers() {
-            const container = document.getElementById('falling-flowers');
-            const flowers = ['🌹', '🌸', '🌺', '🌷', '💐'];
-            const flowersCount = 15;
+        // إنشاء قلوب متساقطة
+        function createFallingHearts() {
+            const container = document.getElementById('falling-hearts');
+            const hearts = ['❤️', '💕', '💖', '💗', '💓'];
+            const heartsCount = 20;
             
-            for (let i = 0; i < flowersCount; i++) {
-                const flower = document.createElement('div');
-                flower.classList.add('flower');
-                flower.textContent = flowers[Math.floor(Math.random() * flowers.length)];
+            for (let i = 0; i < heartsCount; i++) {
+                const heart = document.createElement('div');
+                heart.classList.add('falling-heart');
+                heart.textContent = hearts[Math.floor(Math.random() * hearts.length)];
                 
                 // موقع عشوائي
-                flower.style.left = `${Math.random() * 100}%`;
+                heart.style.left = `${Math.random() * 100}%`;
                 
                 // حجم عشوائي
                 const size = Math.random() * 1.5 + 1;
-                flower.style.fontSize = `${size}rem`;
+                heart.style.fontSize = `${size}rem`;
                 
                 // مدة سقوط عشوائية
                 const duration = Math.random() * 10 + 5;
-                flower.style.animationDuration = `${duration}s`;
+                heart.style.animationDuration = `${duration}s`;
                 
                 // تأخير عشوائي
-                flower.style.animationDelay = `${Math.random() * 5}s`;
+                heart.style.animationDelay = `${Math.random() * 5}s`;
                 
-                container.appendChild(flower);
+                container.appendChild(heart);
             }
         }
         
@@ -891,6 +997,9 @@
                 
                 // إظهار القسم المحدد
                 document.getElementById(targetSection).classList.add('active');
+                
+                // الانتقال إلى أعلى الصفحة
+                window.scrollTo({ top: 0, behavior: 'smooth' });
                 
                 // إعادة إنشاء تأثيرات التلاشي للعناصر
                 setTimeout(initFadeIns, 100);
@@ -954,7 +1063,7 @@
         // تهيئة الصفحة
         window.onload = function() {
             createStars();
-            createFallingFlowers();
+            createFallingHearts();
             updateCountdown();
             initFadeIns();
             
