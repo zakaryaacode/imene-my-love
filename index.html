@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>هدية حب - وعد لمستقبلنا</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lateef:wght@400;700&family=Scheherazade+New&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Scheherazade New', serif;
+        }
+
+        :root {
+            --primary-color: #ff4d6d;
+            --secondary-color: #ff8fa3;
+            --accent-color: #ffb3c1;
+            --dark-color: #590d22;
+            --light-color: #fff0f3;
+            --gold-color: #d4af37;
+            --purple-color: #7b2cbf;
+            --dark-purple: #3c096c;
+        }
+
+        body {
+            background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+            color: var(--light-color);
+            min-height: 100vh;
+            background-attachment: fixed;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* النجوم في الخلفية */
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .star {
+            position: absolute;
+            background-color: white;
+            border-radius: 50%;
+            animation: twinkle 5s infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.2; }
+            50% { opacity: 1; }
+        }
+
+        /* القمر */
+        .moon {
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(145deg, #e6e6e6, #ffffff);
+            border-radius: 50%;
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
+            z-index: -1;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+        .moon::after {
+            content: '';
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            width: 20px;
+            height: 20px;
+            background-color: #d9d9d9;
+            border-radius: 50%;
+        }
+
+        /* التصميم العام */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 0 20px;
+        }
+
+        .logo {
+            font-size: 3rem;
+            color: var(--gold-color);
+            margin-bottom: 10px;
+            font-family: 'Lateef', cursive;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+        }
+
+        /* شريط التنقل */
+        nav {
+            background: rgba(89, 13, 34, 0.8);
+            backdrop-filter: blur(10px);
+            border-radius: 50px;
+            margin: 30px auto;
+            padding: 15px;
+            max-width: 800px;
+            position: sticky;
+            top: 20px;
+            z-index: 100;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin: 5px 15px;
+        }
+
+        nav ul li a {
+            color: var(--light-color);
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            padding: 8px 15px;
+            border-radius: 30px;
+        }
+
+        nav ul li a:hover {
+            color: var(--gold-color);
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-3px);
+        }
+
+        nav ul li a i {
+            margin-left: 8px;
+        }
+
+        /* الأقسام */
+        section {
+            min-height: 100vh;
+            padding: 80px 20px;
+            display: none;
+            opacity: 0;
+            transition: opacity 0.8s;
+        }
+
+        section.active {
+            display: block;
+            opacity: 1;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 50px;
+            color: var(--gold-color);
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+            position: relative;
+            font-family: 'Lateef', cursive;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 150px;
+            height: 4px;
+            background: linear-gradient(to right, transparent, var(--primary-color), transparent);
+            margin: 20px auto;
+            border-radius: 3px;
+        }
+
+        /* الصفحة الرئيسية */
+        #home {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: url('https://images.unsplash.com/photo-1531512073830-ba890ca4eba2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80') no-repeat center center/cover;
+            position: relative;
+        }
+
+        #home::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 0;
+        }
+
+        .home-content {
+            max-width: 800px;
+            background: rgba(89, 13, 34, 0.7);
+            padding: 50px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 1;
+            position: relative;
+        }
+
+        .home-title {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            color: var(--gold-color);
+            font-family: 'Lateef', cursive;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+        }
+
+        .home-subtitle {
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+            line-height: 1.6;
+            color: var(--light-color);
+        }
+
+        .promise {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin: 40px 0;
+            padding: 25px;
+            border: 2px solid var(--gold-color);
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* صفحة قصتنا */
+        .story-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .story-card {
+            background: linear-gradient(145deg, rgba(255, 143, 163, 0.2), rgba(255, 77, 109, 0.3));
+            border-radius: 20px;
+            padding: 30px;
+            width: 320px;
+            text-align: center;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .story-card:hover {
+            transform: translateY(-15px) scale(1.03);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+        }
+
+        .story-card i {
+            font-size: 3.5rem;
+            color: var(--gold-color);
+            margin-bottom: 25px;
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+        }
+
+        .story-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--gold-color);
+            font-family: 'Lateef', cursive;
+        }
+
+        .story-card p {
+            line-height: 1.8;
+            font-size: 1.3rem;
+        }
+
+        /* صفحة المستقبل */
+        .future-content {
+            max-width: 800px;
+            margin: 0 auto;
+            background: linear-gradient(145deg, rgba(123, 44, 191, 0.2), rgba(59, 9, 108, 0.3));
+            padding: 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .future-content p {
+            font-size: 1.4rem;
+            line-height: 1.9;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .sacrifice {
+            text-align: center;
+            font-size: 1.8rem;
+            font-style: italic;
+            margin: 50px 0;
+            padding: 30px;
+            border-left: 4px solid var(--gold-color);
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* صفحة الأحلام */
+        .dreams-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .dream-card {
+            background: linear-gradient(145deg, rgba(212, 175, 55, 0.2), rgba(255, 193, 7, 0.3));
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .dream-card:hover {
+            transform: translateY(-10px) rotate(2deg);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+        }
+
+        .dream-card i {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 25px;
+            text-shadow: 0 0 10px rgba(255, 77, 109, 0.5);
+        }
+
+        .dream-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            font-family: 'Lateef', cursive;
+        }
+
+        .dream-card p {
+            line-height: 1.8;
+            font-size: 1.3rem;
+        }
+
+        /* صفحة المفاجآت */
+        .surprises-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .surprise {
+            background: linear-gradient(145deg, rgba(255, 77, 109, 0.2), rgba(179, 0, 39, 0.3));
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 40px;
+            text-align: center;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s;
+        }
+
+        .surprise:hover {
+            transform: scale(1.02);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+        }
+
+        .surprise h3 {
+            color: var(--gold-color);
+            margin-bottom: 20px;
+            font-size: 2rem;
+            font-family: 'Lateef', cursive;
+        }
+
+        .surprise p {
+            line-height: 1.8;
+            font-size: 1.4rem;
+        }
+
+        .hearts {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+        }
+
+        .heart {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin: 0 15px;
+            animation: pulse 1.5s infinite;
+            text-shadow: 0 0 15px rgba(255, 77, 109, 0.7);
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.3); }
+        }
+
+        /* صفحة العد التنازلي */
+        .countdown-container {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            background: linear-gradient(145deg, rgba(89, 13, 34, 0.5), rgba(59, 9, 108, 0.6));
+            padding: 50px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .countdown-title {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: var(--gold-color);
+            font-family: 'Lateef', cursive;
+        }
+
+        .countdown {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        .countdown-item {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            min-width: 140px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .countdown-number {
+            font-size: 3.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            text-shadow: 0 0 10px rgba(255, 77, 109, 0.5);
+        }
+
+        .countdown-label {
+            font-size: 1.5rem;
+            color: var(--light-color);
+        }
+
+        .message {
+            margin-top: 50px;
+            font-size: 1.4rem;
+            line-height: 1.9;
+        }
+
+        /* التحكم بالموسيقى */
+        .music-player {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            z-index: 100;
+        }
+
+        .music-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 1.8rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s;
+        }
+
+        .music-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        /* التكيف مع الشاشات الصغيرة */
+        @media (max-width: 768px) {
+            .home-title {
+                font-size: 2.8rem;
+            }
+            
+            .home-subtitle {
+                font-size: 1.6rem;
+            }
+            
+            .section-title {
+                font-size: 2.5rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .countdown-item {
+                min-width: 100px;
+            }
+            
+            .countdown-number {
+                font-size: 2.5rem;
+            }
+            
+            .promise {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* تأثيرات النص */
+        .typed-text {
+            overflow: hidden;
+            border-right: 3px solid var(--gold-color);
+            white-space: nowrap;
+            animation: typing 3.5s steps(40, end), blink-caret 0.8s step-end infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: var(--gold-color) }
+        }
+
+        /* الورود في الزوايا */
+        .corner-rose {
+            position: fixed;
+            font-size: 4rem;
+            color: var(--primary-color);
+            opacity: 0.4;
+            z-index: -1;
+            animation: rotate 20s linear infinite;
+            text-shadow: 0 0 10px rgba(255, 77, 109, 0.5);
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .rose-1 {
+            top: 40px;
+            left: 40px;
+        }
+
+        .rose-2 {
+            bottom: 40px;
+            right: 40px;
+        }
+
+        .rose-3 {
+            bottom: 40px;
+            left: 40px;
+        }
+
+        .rose-4 {
+            top: 40px;
+            right: 40px;
+        }
+
+        /* أزهار متساقطة */
+        .falling-flowers {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .flower {
+            position: absolute;
+            font-size: 2rem;
+            color: var(--primary-color);
+            opacity: 0.7;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(100vh) rotate(360deg);
+            }
+        }
+
+        /* تأثيرات التمرير */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 1s;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- النجوم في الخلفية -->
+    <div class="stars" id="stars"></div>
+    <div class="moon"></div>
+    
+    <!-- الورود في الزوايا -->
+    <div class="corner-rose rose-1">🌹</div>
+    <div class="corner-rose rose-2">🌹</div>
+    <div class="corner-rose rose-3">🌹</div>
+    <div class="corner-rose rose-4">🌹</div>
+    
+    <!-- أزهار متساقطة -->
+    <div class="falling-flowers" id="falling-flowers"></div>
+    
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-heart"></i> هدية حب
+            </div>
+        </header>
+        
+        <nav>
+            <ul>
+                <li><a href="#home" class="nav-link" data-section="home"><i class="fas fa-home"></i> الرئيسية</a></li>
+                <li><a href="#story" class="nav-link" data-section="story"><i class="fas fa-book-open"></i> قصتنا</a></li>
+                <li><a href="#future" class="nav-link" data-section="future"><i class="fas fa-calendar"></i> المستقبل</a></li>
+                <li><a href="#dreams" class="nav-link" data-section="dreams"><i class="fas fa-cloud"></i> أحلامنا</a></li>
+                <li><a href="#surprises" class="nav-link" data-section="surprises"><i class="fas fa-gift"></i> مفاجآت</a></li>
+                <li><a href="#countdown" class="nav-link" data-section="countdown"><i class="fas fa-hourglass-half"></i> العد التنازلي</a></li>
+            </ul>
+        </nav>
+        
+        <!-- الصفحة الرئيسية -->
+        <section id="home" class="active">
+            <div class="home-content">
+                <h1 class="home-title animate__animated animate__fadeInDown">هدية إلى حبيبتي</h1>
+                <h2 class="home-subtitle animate__animated animate__fadeIn animate__delay-1s">هذه ليست مجرد هدية... هذا وعد لمستقبلنا معًا ❤️</h2>
+                <div class="promise animate__animated animate__fadeIn animate__delay-2s">
+                    كل خطوة أخطوها اليوم هي من أجل غدنا معًا
+                </div>
+                <p class="animate__animated animate__fadeIn animate__delay-3s">هذا الموقع هو هدية متواضعة لأجمل إمرأة في حياتي، لأعبر عن مدى حبي لكِ وأشارككِ رؤيتي لمستقبلنا الجميل معًا.</p>
+            </div>
+        </section>
+        
+        <!-- صفحة قصتنا -->
+        <section id="story">
+            <h2 class="section-title">قصتنا</h2>
+            <div class="story-container">
+                <div class="story-card fade-in">
+                    <i class="fas fa-heart"></i>
+                    <h3>لقاؤنا الأول</h3>
+                    <p>أتذكر أول مرة رأيتكِ فيها، كانت عيناكِ تلمعان بالدفء والطيبة، وشعرت وكأنني عرفتكِ منذ سنين.</p>
+                </div>
+                
+                <div class="story-card fade-in">
+                    <i class="fas fa-laugh"></i>
+                    <h3>أجمل اللحظات</h3>
+                    <p>كل لحظة أمضيتها معكِ هي كنز ثمين، من الضحكات التي تملأ الجو إلى الصمت المريح بيننا.</p>
+                </div>
+                
+                <div class="story-card fade-in">
+                    <i class="fas fa-book"></i>
+                    <h3>سبب حبي لكِ</h3>
+                    <p>أحبكِ لأنكِ تجعلينني شخصًا أفضل، لأنكِ تدعمينني في كل خطوة، ولأنكِ أنتِ نصفي الذي كنتُ أبحث عنه.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- صفحة المستقبل -->
+        <section id="future">
+            <h2 class="section-title">المستقبل</h2>
+            <div class="future-content fade-in">
+                <p>ابتداءً من 1 سبتمبر، سأبدأ رحلة جديدة في حياتي لتعلم اللغة الألمانية بجدية، والعمل كمطور مواقع مستقل.</p>
+                <p>هذا يعني أنني لن أستطيع التحدث معكِ كل يوم كما في السابق، بل فقط يومي الأربعاء والخميس.</p>
+                
+                <div class="sacrifice">
+                    "قد يبدو الأمر صعبًا، لكنه تضحيتنا الصغيرة من أجل سعادتنا الكبيرة في المستقبل"
+                </div>
+                
+                <p>كل هذا من أجل مستقبلنا، لتوفير المال للزواج بكِ والعيش معًا في حياة مستقرة ومليئة بالسعادة.</p>
+            </div>
+        </section>
+        
+        <!-- صفحة الأحلام -->
+        <section id="dreams">
+            <h2 class="section-title">أحلامنا</h2>
+            <div class="dreams-container">
+                <div class="dream-card fade-in">
+                    <i class="fas fa-ring"></i>
+                    <h3>الزواج</h3>
+                    <p>أحلم باليوم الذي أصبح فيه زوجكِ، وأقف بجانبكِ في كل لحظة من حياتنا.</p>
+                </div>
+                
+                <div class="dream-card fade-in">
+                    <i class="fas fa-home"></i>
+                    <h3>منزلنا</h3>
+                    <p>منزل دافئ نملؤه بالحب والضحكات، حيث نصنع ذكرياتنا الجميلة معًا.</p>
+                </div>
+                
+                <div class="dream-card fade-in">
+                    <i class="fas fa-plane"></i>
+                    <h3>السفر</h3>
+                    <p>اكتشاف العالم معًا، وتجربة ثقافات جديدة، وتذوق أطعمة مختلفة حول العالم.</p>
+                </div>
+                
+                <div class="dream-card fade-in">
+                    <i class="fas fa-smile"></i>
+                    <h3>السعادة</h3>
+                    <p>أكبر حلم لي هو رؤيتكِ سعيدة كل يوم، وأن أكون سببًا من أسباب ابتسامتكِ.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- صفحة المفاجآت -->
+        <section id="surprises">
+            <h2 class="section-title">مفاجآت</h2>
+            <div class="surprises-container">
+                <div class="surprise fade-in">
+                    <h3>رسالة حب</h3>
+                    <p>حبيبتي، مهما ابتعدت عنكِ جغرافيًا، سأبقى قريبًا منكِ بقلبي وروحي. أنتِ دائمًا في خاطري.</p>
+                    <div class="hearts">
+                        <div class="heart">❤️</div>
+                        <div class="heart">❤️</div>
+                        <div class="heart">❤️</div>
+                    </div>
+                </div>
+                
+                <div class="surprise fade-in">
+                    <h3>اقتباس رومانسي</h3>
+                    <p>"الحب ليس أن تنظر إلى بعضكما البعض، بل أن تنظرا معًا في نفس الاتجاه." - أنطوان دو سانت إكزوبيري</p>
+                </div>
+                
+                <div class="surprise fade-in">
+                    <h3>وعد</h3>
+                    <p>أعدكِ أنني سأعمل بجد كل يوم ليكون غدنا أفضل، وأن كل هذا الجهد هو من أجلنا ومن أجل مستقبلنا معًا.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- صفحة العد التنازلي -->
+        <section id="countdown">
+            <h2 class="section-title">العد التنازلي</h2>
+            <div class="countdown-container fade-in">
+                <h3 class="countdown-title">حتى تحقيق أحلامنا</h3>
+                
+                <div class="countdown">
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="years">5</div>
+                        <div class="countdown-label">سنوات</div>
+                    </div>
+                    
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="months">0</div>
+                        <div class="countdown-label">أشهر</div>
+                    </div>
+                    
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="days">0</div>
+                        <div class="countdown-label">أيام</div>
+                    </div>
+                    
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="hours">0</div>
+                        <div class="countdown-label">ساعات</div>
+                    </div>
+                </div>
+                
+                <div class="message">
+                    <p>هذا العد التنازلي يمثل الفترة التي سأعمل فيها بجد لتحقيق أحلامنا، حتى نلتقي لنبدأ حياة جديدة معًا.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <!-- مشغل الموسيقى -->
+    <div class="music-player">
+        <button class="music-btn" id="music-toggle">
+            <i class="fas fa-music"></i>
+        </button>
+        <audio id="background-music" loop>
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <script>
+        // إنشاء النجوم في الخلفية
+        function createStars() {
+            const starsContainer = document.getElementById('stars');
+            const starsCount = 200;
+            
+            for (let i = 0; i < starsCount; i++) {
+                const star = document.createElement('div');
+                star.classList.add('star');
+                
+                // حجم عشوائي للنجمة
+                const size = Math.random() * 4;
+                star.style.width = `${size}px`;
+                star.style.height = `${size}px`;
+                
+                // موقع عشوائي للنجمة
+                star.style.top = `${Math.random() * 100}%`;
+                star.style.left = `${Math.random() * 100}%`;
+                
+                // مدة动画 عشوائية
+                star.style.animationDuration = `${3 + Math.random() * 7}s`;
+                star.style.animationDelay = `${Math.random() * 5}s`;
+                
+                starsContainer.appendChild(star);
+            }
+        }
+        
+        // إنشاء أزهار متساقطة
+        function createFallingFlowers() {
+            const container = document.getElementById('falling-flowers');
+            const flowers = ['🌹', '🌸', '🌺', '🌷', '💐'];
+            const flowersCount = 15;
+            
+            for (let i = 0; i < flowersCount; i++) {
+                const flower = document.createElement('div');
+                flower.classList.add('flower');
+                flower.textContent = flowers[Math.floor(Math.random() * flowers.length)];
+                
+                // موقع عشوائي
+                flower.style.left = `${Math.random() * 100}%`;
+                
+                // حجم عشوائي
+                const size = Math.random() * 1.5 + 1;
+                flower.style.fontSize = `${size}rem`;
+                
+                // مدة سقوط عشوائية
+                const duration = Math.random() * 10 + 5;
+                flower.style.animationDuration = `${duration}s`;
+                
+                // تأخير عشوائي
+                flower.style.animationDelay = `${Math.random() * 5}s`;
+                
+                container.appendChild(flower);
+            }
+        }
+        
+        // التنقل بين الأقسام
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetSection = this.getAttribute('data-section');
+                
+                // إخفاء جميع الأقسام
+                document.querySelectorAll('section').forEach(section => {
+                    section.classList.remove('active');
+                });
+                
+                // إظهار القسم المحدد
+                document.getElementById(targetSection).classList.add('active');
+                
+                // إعادة إنشاء تأثيرات التلاشي للعناصر
+                setTimeout(initFadeIns, 100);
+            });
+        });
+        
+        // العد التنازلي
+        function updateCountdown() {
+            const startDate = new Date('2023-09-01');
+            const endDate = new Date('2028-09-01');
+            const now = new Date();
+            
+            // الوقت المتبقي بالمللي ثانية
+            const timeRemaining = endDate - now;
+            
+            // حساب السنوات، الأشهر، الأيام، والساعات المتبقية
+            const yearsRemaining = Math.floor(timeRemaining / (1000 * 60 * 60 * 24 * 365));
+            const monthsRemaining = Math.floor((timeRemaining % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24 * 30));
+            const daysRemaining = Math.floor((timeRemaining % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24));
+            const hoursRemaining = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            
+            // تحديث العد التنازلي في الواجهة
+            document.getElementById('years').textContent = yearsRemaining;
+            document.getElementById('months').textContent = monthsRemaining;
+            document.getElementById('days').textContent = daysRemaining;
+            document.getElementById('hours').textContent = hoursRemaining;
+        }
+        
+        // التحكم بالموسيقى
+        const musicToggle = document.getElementById('music-toggle');
+        const backgroundMusic = document.getElementById('background-music');
+        let isPlaying = false;
+        
+        musicToggle.addEventListener('click', function() {
+            if (isPlaying) {
+                backgroundMusic.pause();
+                musicToggle.innerHTML = '<i class="fas fa-music"></i>';
+            } else {
+                backgroundMusic.play();
+                musicToggle.innerHTML = '<i class="fas fa-pause"></i>';
+            }
+            
+            isPlaying = !isPlaying;
+        });
+        
+        // تأثيرات التلاشي عند التمرير
+        function initFadeIns() {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            fadeElements.forEach(element => {
+                element.classList.remove('visible');
+            });
+            
+            setTimeout(() => {
+                fadeElements.forEach(element => {
+                    element.classList.add('visible');
+                });
+            }, 100);
+        }
+        
+        // تهيئة الصفحة
+        window.onload = function() {
+            createStars();
+            createFallingFlowers();
+            updateCountdown();
+            initFadeIns();
+            
+            // تحديث العد التنازلي كل ساعة
+            setInterval(updateCountdown, 3600000);
+        };
+    </script>
+</body>
+</html>
